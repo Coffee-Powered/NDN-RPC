@@ -1,0 +1,47 @@
+1 - Python Paths
+1.1 - Minindn: export PYTHONPATH=$PYTHONPATH:/home/vagrant/.local/lib/python3.11/site-packages
+2 - Fix broken repository
+2.1 - Check if there are missing objects: git fsck --full
+2.2 - Delete missing objects: find .git/objects/ -type f -empty -delete
+2.3 - Retreive deleted objects: git fetch --all
+
+----------------
+
+Objectives
+    Latency: Time taken to complete an RPC.
+    Throughput: Number of RPCs handled per second.
+    Scalability: Performance under varying load conditions.
+    Reliability: Behavior under packet loss or network partitioning.
+    Resource Utilization: CPU, memory, and bandwidth usage.
+
+Key Metrics
+    End-to-End Latency: Measure the time from sending a request to receiving a response.
+    Throughput: Evaluate the rate of successful RPC requests per unit of time.
+    Data Overhead: Measure the size of metadata in RPC requests and responses.
+    Error Rate: Assess the failure rates under normal and adverse conditions.
+    CPU and Memory Usage: Monitor resource utilization on clients and servers.
+    Network Utilization: Measure the bandwidth consumed by the protocol.
+
+Scenarios
+    Single Request/Response: Test the round-trip time of a single RPC.
+    Concurrent Requests: Simulate multiple clients sending requests concurrently to test scalability.
+    Content Caching Impact: Evaluate how caching affects latency and bandwidth.
+    Dynamic Topology: Test the protocol’s performance in a network with dynamic topology changes.
+
+----------------
+
+RICE benchmark:
+
+    Rocketfuel 1239 - Sprintlink topology
+    319 nodes
+    30 clients (single link routers)
+    6 servers  (randomly chosen)
+    100 functions (randomly spread to servers, each is present on 3 servers)
+    5 seconds to complete a function
+    clients generate 1 request per second (1 out of 5 random functions)
+    servers can execute 5 functions at once
+
+--------------------------------------
+
+Nodes: 20
+Successful config: s4 s17 c11 c3

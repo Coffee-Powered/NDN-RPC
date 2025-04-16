@@ -1,0 +1,8 @@
+Time to boot up NDN with 1 CPU: 211.825135 seconds.
+Time to boot up NDN with 2 CPUs: 183.171633 seconds.
+Time to boot up NDN with 4 CPUs: 179.129862 seconds.
+Time to boot up NDN with 8 CPUs: 382.597421 seconds.
+Time to boot up NDN with 16 CPUs: 612.514119 seconds.
+
+Time to boot up NDN with 8 CPUs: 375.751327 seconds.
+
