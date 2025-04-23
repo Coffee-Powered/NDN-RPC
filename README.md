@@ -1,3 +1,7 @@
-# NDN-RPC
+# Steps to run
 
-TODO: I think I should clone this repo into the NDN VM and copy the working project code into it. Then whenever I work on the projectin the VM, I can push to this repo and then pull it in the Dundas context.
+vagrant up
+vagrant ssh
+git clone https://github.com/Coffee-Powered/NDN-RPC.git
+cd NDN-RPC/testbed
+make run TASK="sprintlink fwh" CLI=1 SRV=1 SIZE=10
