@@ -1,0 +1,1 @@
+I have to place a file here otherwise git won't push the logs directory, which is the single-most important directory in order to oberve anything thats going on in the experiments.
