@@ -14,7 +14,7 @@ def get_time_diff(start: datetime, finish: datetime) -> float:
 
 def print_time_message(message: str) -> None:
         time = get_datetime()
-        print(f"[{time.time()}]: {message}")
+        print(f"[{time.time()}]: {message}", flush=True)
 
 def generate_random(iters: int) -> int:
         base: int = 0
