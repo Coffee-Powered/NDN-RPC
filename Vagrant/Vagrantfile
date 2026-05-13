@@ -15,6 +15,7 @@ $INSTALL_BASE = <<EOF
   sudo apt-get install -y libpcap-dev
   sudo apt-get install -y libsystemd-dev
   sudo apt-get install -y tcpdump
+  sudo python3 -m pip install --upgrade pip  # @jsinger, do this or pip breaks!
   sudo pip install python-ndn             # Added by Charles, "sudo pip" makes it a global install
   
   # Clone and install mini-ndn
