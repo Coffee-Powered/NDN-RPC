@@ -15,9 +15,9 @@ $INSTALL_BASE = <<EOF
   sudo apt-get install -y libpcap-dev
   sudo apt-get install -y libsystemd-dev
   sudo apt-get install -y tcpdump
-  sudo python3 -m pip install --upgrade pip  # @jsinger, do this or pip breaks!
-  sudo pip install python-ndn             # Added by Charles, "sudo pip" makes it a global install
-  
+  sudo python3 -m pip install --upgrade pip   # @jsinger, do this or pip breaks!
+  sudo pip install python-ndn                 # @cvarley, "sudo pip" makes it a global install
+
   # Clone and install mini-ndn
   #
   # install.sh has additional options that can be used to install specific
@@ -38,6 +38,10 @@ $INSTALL_BASE = <<EOF
   echo "export PATH=\$PATH:/usr/local/bin" >> /home/vagrant/.profile
   echo "export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:/usr/local/lib64/" >> /home/vagrant/.profile
   echo "export PKG_CONFIG_PATH=/usr/local/lib64/pkgconfig/" >> /home/vagrant/.profile
+
+  # @cvarley, additional commands to get project code and setup testbed.
+  git clone https://github.com/Coffee-Powered/NDN-RPC.git /home/vagrant/ndn-rpc
+  export PYTHONPATH=$PYTHONPATH:/home/vagrant/mini-ndn
 EOF
 
 Vagrant.configure("2") do |config|
